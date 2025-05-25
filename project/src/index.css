@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #2E8B57;
+  --color-primary-light: #3CB371;
+  --color-primary-dark: #228B22;
+  --color-background: #121212;
+  --color-surface: #1E1E1E;
+  --color-text: #FFFFFF;
+  --color-text-secondary: #B3B3B3;
+  --color-border: #333333;
+}
+
+body {
+  @apply bg-[#121212] text-white font-sans antialiased;
+}
+
+/* Custom scrollbar for the app */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1E1E1E;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2E8B57;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3CB371;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply bg-[#2E8B57] hover:bg-[#3CB371] active:bg-[#228B22] text-white py-2 px-4 rounded-md transition duration-200 font-medium;
+}
+
+.btn-secondary {
+  @apply bg-transparent border border-[#2E8B57] text-[#2E8B57] hover:bg-[#2E8B57]/10 py-2 px-4 rounded-md transition duration-200 font-medium;
+}
+
+/* Card styles */
+.card {
+  @apply bg-[#1E1E1E] rounded-lg p-4 shadow-lg border border-[#333333];
+}
+
+/* Form control styles */
+.form-control {
+  @apply bg-[#1E1E1E] border border-[#333333] rounded-md py-2 px-3 text-white w-full focus:outline-none focus:ring-2 focus:ring-[#2E8B57] transition duration-200;
+}
+
+/* Table styles */
+.table-container {
+  @apply w-full overflow-x-auto;
+}
+
+.table {
+  @apply w-full border-collapse;
+}
+
+.table th {
+  @apply py-3 px-4 text-left bg-[#1E1E1E] border-b border-[#333333] text-[#2E8B57] font-medium;
+}
+
+.table td {
+  @apply py-3 px-4 border-b border-[#333333];
+}
+
+.table tr:hover {
+  @apply bg-[#1E1E1E]/50;
+}
+
+/* Animation for alerts */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.pulse {
+  animation: pulse 2s infinite ease-in-out;
+}
