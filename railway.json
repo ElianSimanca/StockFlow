@@ -1,0 +1,10 @@
+{
+    "build": {
+      "nixpacks": {
+        "path": "./backend"  
+      }
+    },
+    "deploy": {
+      "startCommand": "node backend/app.js"  
+    }
+  }

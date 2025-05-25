@@ -1,12 +1,14 @@
 {
   "name": "stockflow-backend",
   "version": "1.0.0",
+  "type": "commonjs",  
   "engines": {
-    "node": ">=14.x"
+    "node": ">=18.x"  
   },
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "install-production": "npm install --production"
   },
   "dependencies": {
     "express": "^4.18.2",
@@ -18,5 +20,8 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.2"
+  },
+  "cache": {
+    "directories": ["node_modules"]
   }
 }
