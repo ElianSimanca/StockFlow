@@ -1,6 +1,7 @@
-const express = require('express');
+import express from 'express';
+import pool from '../config/db.js'; // Nota la extensión .js
+
 const router = express.Router();
-const pool = require('../config/db');
 
 // GET todos los productos
 router.get('/', async (req, res, next) => {
@@ -31,4 +32,4 @@ router.post('/', async (req, res, next) => {
   }
 });
 
-module.exports = router;
+export default router; // Cambio clave aquí
